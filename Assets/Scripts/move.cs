@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Leap;
 using System.IO;
-//using System.IO.File;
-//using UnityVectorExtension;
-
 
 
 public class move : MonoBehaviour
@@ -21,22 +18,6 @@ public class move : MonoBehaviour
 	int countBegining= 0;
 	public static float appX;
 	public static float appY;
-	//cemal
-	/*
-	public static ArrayList coordinates = new ArrayList();
-	
-
-	String filePath = @levels.levelname;
-    ArrayList pointArray = new ArrayList();
-    string[] arr = new string[2];
-    foreach((String s in File.ReadAllLines(filePath))
-	{
-        arr = s.Split(' ');
-        pointArray.Add(new Point(Math.Round(float.Parse(arr[0]), 2),
-        Math.Round(float.Parse(arr[1]), 2)));
-    }
-		*/
-	//cemal
 
 	// Use this for initialization
 	void Start()
@@ -58,16 +39,12 @@ public class move : MonoBehaviour
 			handlist.Add(leapHand);
 		}
 
-
-			//if (index.IsExtended)
-
-			//leap x y read
 		index = frame.Hands[0].Fingers[(int)Finger.FingerType.TYPE_INDEX];
 		Vector fingPos = index.StabilizedTipPosition;
 		Vector norm = iBox.NormalizePoint(fingPos, false);
 		 appX = norm.x * appWidth;
 		 appY = -1 * (1 - norm.y) * appHeight;
-		//float finalResult = Distance (appX, appY, frames.imageX, frames.imageY);
+		 
 		float distanceX = appX - frames.imageX;
 		float distanceY = appY - frames.imageY;
 		if (Mathf.Abs(distanceX) < 50 && Mathf.Abs(distanceY) < 50) {
