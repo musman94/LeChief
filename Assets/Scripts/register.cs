@@ -5,7 +5,6 @@ using System;
 using System.Text.RegularExpressions;
 using UnityEngine.SceneManagement;
 public class register : MonoBehaviour {
-	//string createUserURL = "https://lechief.azurewebsites.net/register.php";
 	string createUserURL = "localhost/lechief/register.php";
 	public GameObject username;
 	public GameObject password;
@@ -19,6 +18,7 @@ public class register : MonoBehaviour {
 	private string form;
 	private bool validEmail= false;
 	private string sceneName = "loginson";
+	
     // Use this for initialization
     void Start () {
 	
