@@ -8,23 +8,6 @@ using System;
 
 public class frames : MonoBehaviour 
 {
-	//cemal
-	/*
-	public static ArrayList coordinates = new ArrayList();
-	
-
-	String filePath = @"D:\492\russiandance1.txt";
-    ArrayList pointArray = new ArrayList();
-    string[] arr = new string[2];
-    foreach (String s in File.ReadAllLines(filePath))
-	{
-        arr = s.Split(' ');
-        pointArray.Add(new Point(Math.Round(float.Parse(arr[0]), 2),
-        Math.Round(float.Parse(arr[1]), 2)));
-    }
-    */
-	//cemal
-
 
 	private Vector3 startpos;
 	private Vector3 endpos;
@@ -33,7 +16,7 @@ public class frames : MonoBehaviour
 	public float speed = 1;
 	public bool move2 = true;
 	float ElapsedTime = 0;
-    float FinishTime = 60f; 
+    	float FinishTime = 60f; 
 	public static float imageX;
 	public static float imageY;
 	string line1;
@@ -88,9 +71,8 @@ public class frames : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-			//SoundPlayer player = new SoundPlayer (@"D:\492\RussianDance.wav");
-			//player.Play ();
-			Draw ();
+
+		Draw ();
 
 	
 	}
